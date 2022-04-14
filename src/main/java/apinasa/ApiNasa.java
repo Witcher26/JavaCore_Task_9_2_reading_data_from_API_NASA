@@ -1,23 +1,38 @@
-package apiNasa;
+package apinasa;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.io.Serializable;
+public class ApiNasa {
 
-public class ApiNasa implements Serializable {
-
+    @JsonProperty
+    private String copyright;
+    @JsonProperty
     private int id;
+    @JsonProperty
     private String date;
+    @JsonProperty
     private String explanation;
+    @JsonProperty
     private String hdurl;
     @JsonProperty("media_type")
     private String media;
     @JsonProperty("service_version")
     private String service;
+    @JsonProperty
     private String title;
+    @JsonProperty
     private String url;
 
     public ApiNasa() {
+    }
+
+    public String getCopyright() {
+        return copyright;
+    }
+
+    public ApiNasa setCopyright(String copyright) {
+        this.copyright = copyright;
+        return this;
     }
 
     public int getId() {
